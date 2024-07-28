@@ -1,7 +1,31 @@
 import React from "react"
 
 const SearchForm = () => {
-  return <div>SearchForm</div>
+  const handleSubmit = (e) => {
+    e.preventDefault()
+
+    //1. Accessing the search value using elements insteadof FormApi or controlled state
+    const searchValue = e.target.elements.search.value
+    if (!searchValue) return
+
+    console.log(searchValue)
+  }
+  return (
+    <section>
+      <h1 className="title">unsplash images</h1>
+      <form className="search-form" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          className="form-input"
+          name="search"
+          placeholder="cat"
+        />
+        <button type="submit " className="btn">
+          search
+        </button>
+      </form>
+    </section>
+  )
 }
 
 export default SearchForm
