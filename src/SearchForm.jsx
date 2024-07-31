@@ -1,14 +1,15 @@
 import React from "react"
+import { useGlobalContext } from "./context"
 
 const SearchForm = () => {
+  const { setSearchTerm } = useGlobalContext()
   const handleSubmit = (e) => {
     e.preventDefault()
 
-    //1. Accessing the search value using elements insteadof FormApi or controlled state
     const searchValue = e.target.elements.search.value
     if (!searchValue) return
 
-    console.log(searchValue)
+    setSearchTerm(searchValue)
   }
   return (
     <section>
