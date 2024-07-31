@@ -9,7 +9,8 @@ const url =
 const Gallery = () => {
   const { searchTerm } = useGlobalContext()
   const resp = useQuery({
-    queryKey: ["images"],
+    //1. Adding a value that constantly update make react query to refetches data
+    queryKey: ["images", searchTerm],
     queryFn: async () => {
       const result = await axios.get(`${url}&query=${searchTerm}`)
       return result.data
