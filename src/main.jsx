@@ -12,9 +12,10 @@ const queryClient = new QueryClient()
 ReactDOM.createRoot(document.getElementById("root")).render(
   //3. Wrapped entire application in the QueryClientProvider
   // 4. PAssedthe queryClient as a props
-  <QueryClientProvider client={queryClient}>
-    <AppContext>
+
+  <AppContext>
+    <QueryClientProvider client={queryClient}>
       <App />
-    </AppContext>
-  </QueryClientProvider>
+    </QueryClientProvider>
+  </AppContext>
 )
