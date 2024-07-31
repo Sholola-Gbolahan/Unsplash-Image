@@ -72,12 +72,12 @@ html {
 }
 
 /*1. This line of code set theme to dark if the user default theme selection is dark theme on browser */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --textColor: var(--dark-mode-text-color);
     --backgroundColor: var(--dark-mode-bg-color);
   }
-}
+} */
 .dark-theme {
   --textColor: var(--dark-mode-text-color);
   --backgroundColor: var(--dark-mode-bg-color);
